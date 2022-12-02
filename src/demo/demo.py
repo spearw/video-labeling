@@ -15,8 +15,7 @@ from time import time
 
 
 class ObjectDetection:
-    """Creates and saves a labeled object-detection video from a source
-    """
+    """Creates and saves a labeled object-detection video from a source"""
 
     def __init__(self):
 
@@ -232,6 +231,7 @@ class ObjectDetection:
         video_capture.release()
 
 
-# Create a new object and execute.
-detector = ObjectDetection()
-detector.detect("https://www.youtube.com/watch?v=xgFmk6PXZkg")
+if __name__ == "__main__":
+    # Create a new object and execute.
+    detector = ObjectDetection()
+    detector.detect("https://www.youtube.com/watch?v=xgFmk6PXZkg")
