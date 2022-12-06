@@ -210,6 +210,7 @@ class ObjectDetection:
                 # Calculate speed
                 end_time = time()
                 fps = 1 / np.round(end_time - start_time, 3)
+                print(f"fps: {fps}")
                 total_fps.append(fps)
 
                 # Write frames to file
