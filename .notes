@@ -1,0 +1,20 @@
+Start up amazon ec2 with 16g storage
+
+install sqlite-devel
+sudo yum install sqlite-devel -y
+
+Install python 3.8
+https://computingforgeeks.com/how-to-install-python-3-on-centos/
+
+clone repo
+https://github.com/spearw/video-labeling/tree/no-monitor
+
+switch to branch no-monitor
+
+Pip install requirements may need --no-cache-dir flag on pip install (especially for torch)
+
+pip3.8 install -r requirements.txt --no-cache-dir
+
+run project
+cd src/demo
+python3.8 demo.py
