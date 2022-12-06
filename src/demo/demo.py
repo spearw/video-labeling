@@ -219,8 +219,8 @@ class ObjectDetection:
                 # cv2.imshow("Frame", frame)
 
                 # Press Q on keyboard to  exit
-                if cv2.waitKey(25) & 0xFF == ord("q"):
-                    break
+                # if cv2.waitKey(25) & 0xFF == ord("q"):
+                #     break
 
             # break when capture is closed
             else:
