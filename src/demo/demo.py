@@ -56,6 +56,8 @@ class ObjectDetection:
             results.xyxyn[0][:, -1].numpy(),
             results.xyxyn[0][:, :-1].numpy(),
         )
+        for label in labels:
+            print(self.model.names[int(label)], coord)
         return labels, coord
 
     def draw_boxes(self, results, frame):
@@ -203,7 +205,7 @@ class ObjectDetection:
 
                 # Write boxes on frame
                 results = self.model_frame(frame)
-                frame = self.draw_boxes(results, frame)
+                # frame = self.draw_boxes(results, frame)
 
                 # Calculate speed
                 end_time = time()
@@ -211,10 +213,10 @@ class ObjectDetection:
                 total_fps.append(fps)
 
                 # Write frames to file
-                out.write(frame)
+                # out.write(frame)
 
                 # Display the resulting frame
-                cv2.imshow("Frame", frame)
+                # cv2.imshow("Frame", frame)
 
                 # Press Q on keyboard to  exit
                 if cv2.waitKey(25) & 0xFF == ord("q"):
